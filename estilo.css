@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+/* ==========================================================
+   Blanca Estrán · hoja de estilos común
+   Editorial cálido — papel hueso, tinta, acento terracota.
+   Una sola familia tipográfica (Source Serif 4) en 3 pesos.
+   ========================================================== */
+
+:root{
+  --papel:#FAF7F2;
+  --papel-hondo:#F1EBE1;
+  --honda:#272219;
+
+  --tinta:#1F1D1A;
+  --tinta-media:#4E483F;
+  --tinta-suave:#6E6659;
+
+  --acento:#8A5A44;
+  --acento-hondo:#6F4634;
+  --acento-claro:#C89273;
+
+  --linea:#DFD7C9;
+  --linea-clara:#EAE3D8;
+
+  --letra:"Source Serif 4",Georgia,"Times New Roman",serif;
+
+  --ancho:1080px;
+  --aire:34px;
+  --medida:33em;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--papel);
+  color:var(--tinta);
+  font-family:var(--letra);
+  font-weight:400;
+  font-size:18px;
+  line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.env{width:100%;max-width:var(--ancho);margin:0 auto;padding:0 var(--aire)}
+
+.saltar{position:absolute;left:-9999px}
+.saltar:focus{left:16px;top:16px;z-index:99;background:var(--tinta);color:var(--papel);padding:10px 18px}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
+
+/* ---------------- Tipografía ---------------- */
+
+h1,h2,h3,h4{margin:0;color:var(--tinta);font-weight:400;letter-spacing:-0.012em}
+h1{font-size:clamp(2.3rem,5vw,3.7rem);line-height:1.1;font-weight:300}
+h1 em{font-style:italic;font-weight:300}
+h2{font-size:clamp(1.7rem,2.9vw,2.35rem);line-height:1.2;font-weight:300}
+h3{font-size:1.2rem;line-height:1.34;font-weight:600}
+h4{font-size:1.02rem;font-weight:600}
+
+p{margin:0 0 1.2em;max-width:var(--medida)}
+p:last-child{margin-bottom:0}
+
+.entradilla{font-size:1.12rem;color:var(--tinta-media);line-height:1.62}
+.apunte{font-size:.94rem;color:var(--tinta-suave)}
+
+/* Sangrado editorial: el texto no se alinea con el titular */
+.sangrado{margin-left:clamp(0px,4.4vw,72px)}
+
+/* Filete corto en lugar de rótulo en versalitas */
+.filete{width:52px;height:1px;background:var(--acento);border:0;margin:0 0 30px}
+
+/* ---------------- Botones y enlaces ---------------- */
+
+.btn{
+  display:inline-block;
+  font-family:var(--letra);
+  font-size:1rem;
+  font-weight:400;
+  text-decoration:none;
+  padding:12px 28px;
+  background:var(--tinta);
+  color:var(--papel);
+  border:1px solid var(--tinta);
+  transition:background .18s,border-color .18s,color .18s;
+}
+.btn:hover{background:var(--acento);border-color:var(--acento)}
+.btn--linea{background:transparent;color:var(--tinta)}
+.btn--linea:hover{background:transparent;color:var(--acento);border-color:var(--acento)}
+.btn--claro{background:transparent;color:var(--papel);border-color:rgba(250,247,242,.45)}
+.btn--claro:hover{background:var(--papel);color:var(--tinta);border-color:var(--papel)}
+
+.acciones{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+
+.enlace{color:var(--acento);text-decoration:none;border-bottom:1px solid var(--linea);transition:border-color .18s}
+.enlace:hover{border-bottom-color:var(--acento)}
+
+/* ---------------- Cabecera ---------------- */
+
+.cima{border-bottom:1px solid var(--linea)}
+.cima .env{display:flex;align-items:baseline;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px}
+
+.marca{font-size:1.3rem;text-decoration:none;line-height:1.15;font-weight:400}
+.marca span{display:block;font-size:.83rem;font-weight:400;color:var(--tinta-suave);margin-top:3px}
+
+.nav{display:flex;flex-wrap:wrap;gap:26px;align-items:baseline}
+.nav a{font-size:.97rem;text-decoration:none;color:var(--tinta-media);border-bottom:1px solid transparent;padding-bottom:2px;transition:color .18s,border-color .18s}
+.nav a:hover{color:var(--tinta);border-bottom-color:var(--acento)}
+.nav a[aria-current="page"]{color:var(--tinta);border-bottom-color:var(--acento)}
+.nav .cita{color:var(--acento)}
+
+/* ---------------- Portada ---------------- */
+
+.portada{padding:112px 0 104px}
+.portada .env{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:76px;align-items:start}
+.portada h1{max-width:11.5em}
+.portada .entradilla{margin-top:34px;max-width:31em}
+.portada .credencial{font-size:.9rem;color:var(--tinta-suave);margin:0 0 26px}
+
+.retrato{margin-top:14px}
+.retrato img{
+  width:100%;
+  height:auto;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:52% center;
+  background:var(--papel-hondo);
+}
+.retrato figcaption{font-size:.84rem;color:var(--tinta-suave);margin-top:14px;padding-left:2px}
+
+/* ---------------- Motivos (lista editorial, no rejilla) ---------------- */
+
+.motivos{padding:0 0 100px}
+.motivos h2{max-width:16em;margin-bottom:44px}
+.motivo{
+  display:grid;
+  grid-template-columns:minmax(0,.36fr) minmax(0,.64fr);
+  gap:44px;
+  padding:28px 0;
+  border-top:1px solid var(--linea);
+}
+.motivo:last-of-type{border-bottom:1px solid var(--linea)}
+.motivo p{color:var(--tinta-media);margin:0;max-width:38em}
+.motivos .cola{margin-top:34px;max-width:44em;color:var(--tinta-suave);font-size:.97rem}
+
+/* ---------------- Método ---------------- */
+
+.metodo{background:var(--papel-hondo);padding:104px 0}
+.metodo .env{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:76px;align-items:start}
+.metodo p{color:var(--tinta-media)}
+.metodo h2{max-width:13em;margin-bottom:24px}
+.detalle{list-style:none;margin:0;padding:0}
+.detalle li{padding:15px 0;border-bottom:1px solid var(--linea);display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,.58fr);gap:24px;font-size:.99rem}
+.detalle li:first-child{border-top:1px solid var(--linea)}
+.detalle dt,.detalle .clave{color:var(--tinta);font-weight:600}
+.detalle .valor{color:var(--tinta-media)}
+
+/* ---------------- Panel oscuro (fe) ---------------- */
+
+.fe{background:var(--honda);color:rgba(250,247,242,.84);padding:104px 0}
+.fe h2,.fe h3{color:var(--papel)}
+.fe h2{margin-bottom:24px}
+.fe p{color:rgba(250,247,242,.8)}
+.fe .filete{background:var(--acento-claro)}
+.fe .env{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:76px;align-items:start}
+.hitos{list-style:none;margin:0;padding:0;border-top:1px solid rgba(250,247,242,.2)}
+.hitos li{padding:19px 0;border-bottom:1px solid rgba(250,247,242,.2);font-size:.97rem}
+.hitos strong{display:block;color:var(--papel);font-weight:600;font-size:1.02rem;margin-bottom:3px}
+
+/* ---------------- Formación ---------------- */
+
+.formacion{padding:92px 0}
+.formacion h2{margin-bottom:40px}
+.titulo{
+  display:grid;
+  grid-template-columns:minmax(0,.36fr) minmax(0,.64fr);
+  gap:44px;
+  padding:24px 0;
+  border-top:1px solid var(--linea);
+}
+.titulo:last-of-type{border-bottom:1px solid var(--linea)}
+.titulo p{margin:0;color:var(--tinta-media);font-size:.99rem}
+
+/* ---------------- Cierre ---------------- */
+
+.cierre{padding:112px 0 128px;border-top:1px solid var(--linea)}
+.cierre h2{max-width:15em}
+.cierre .entradilla{margin-top:26px;max-width:38em}
+
+/* ---------------- Páginas interiores ---------------- */
+
+.pag{padding:84px 0 56px;border-bottom:1px solid var(--linea)}
+.pag h1{max-width:13em;font-size:clamp(2rem,4.2vw,3.1rem)}
+.pag .entradilla{margin-top:26px;max-width:36em}
+
+.prosa{padding:76px 0 96px}
+.prosa section,.prosa>.env>.acciones{max-width:860px}
+.prosa h2{margin:0 0 20px}
+.prosa h3{margin:0 0 12px}
+.prosa section{margin-bottom:56px}
+.prosa section:last-child{margin-bottom:0}
+.prosa p{color:var(--tinta-media);max-width:36em}
+.prosa ul{margin:0 0 1.2em;padding-left:1.15em;max-width:36em;color:var(--tinta-media)}
+.prosa li{margin-bottom:.5em}
+.prosa li::marker{color:var(--acento)}
+
+/* Ficha de datos (contacto) */
+.ficha{list-style:none;margin:0;padding:0;border-top:1px solid var(--linea)}
+.ficha li{display:grid;grid-template-columns:minmax(0,.3fr) minmax(0,.7fr);gap:28px;padding:18px 0;border-bottom:1px solid var(--linea)}
+.ficha .clave{font-weight:600}
+.ficha .valor{color:var(--tinta-media)}
+.ficha a{color:var(--acento);text-decoration:none;border-bottom:1px solid var(--linea-clara)}
+.ficha a:hover{border-bottom-color:var(--acento)}
+
+/* Páginas legales */
+.legal{padding:64px 0 96px}
+.legal h2{font-size:1.42rem;margin:44px 0 14px}
+.legal h2:first-of-type{margin-top:0}
+.legal h3{font-size:1.06rem;margin:26px 0 10px}
+.legal p,.legal li{color:var(--tinta-media);font-size:.99rem;max-width:38em}
+.legal ul{padding-left:1.15em;max-width:38em}
+.legal li{margin-bottom:.45em}
+.legal table{border-collapse:collapse;width:100%;max-width:840px;margin:18px 0 26px;font-size:.94rem}
+.legal th,.legal td{text-align:left;padding:11px 14px;border:1px solid var(--linea);vertical-align:top}
+.legal th{background:var(--papel-hondo);font-weight:600}
+
+/* ---------------- Pie ---------------- */
+
+.pie{border-top:1px solid var(--linea);padding:56px 0 34px;font-size:.94rem;color:var(--tinta-suave)}
+.pie .env{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:40px}
+.pie a{text-decoration:none;color:var(--tinta-media)}
+.pie a:hover{color:var(--acento)}
+.pie h4{font-size:.88rem;font-weight:600;color:var(--tinta);margin-bottom:14px}
+.pie nav{display:flex;flex-direction:column;gap:10px}
+.pie-marca{font-size:1.15rem;color:var(--tinta);margin-bottom:8px;max-width:none}
+.pie p{max-width:26em}
+.pie-fin{margin-top:44px;padding-top:22px;display:block;font-size:.88rem;position:relative}
+.pie-fin::before{content:"";position:absolute;top:0;left:var(--aire);right:var(--aire);height:1px;background:var(--linea-clara)}
+.pie-fin p{max-width:none}
+
+/* ---------------- Adaptación ---------------- */
+
+@media(max-width:940px){
+  body{font-size:17px}
+  .portada{padding:76px 0 72px}
+  .portada .env,.metodo .env,.fe .env{grid-template-columns:1fr;gap:48px}
+  .retrato{max-width:380px;margin-top:0}
+  .metodo,.fe{padding:76px 0}
+  .motivos{padding-bottom:72px}
+  .cierre{padding:80px 0 92px}
+  .pie .env{grid-template-columns:1fr 1fr}
+  .cima .env{padding-top:20px;padding-bottom:20px}
+  .nav{gap:20px}
+}
+
+@media(max-width:600px){
+  :root{--aire:22px}
+  .motivo,.titulo,.detalle li,.ficha li{grid-template-columns:1fr;gap:10px}
+  .motivo,.titulo{padding:22px 0}
+  .sangrado{margin-left:0}
+  .acciones .btn{width:100%;text-align:center}
+  .pie .env{grid-template-columns:1fr;gap:32px}
+  .nav{gap:16px 18px}
+  .nav a{font-size:.93rem}
+  .legal table,.legal thead,.legal tbody,.legal th,.legal td,.legal tr{display:block}
+  .legal th{border-bottom:0}
+  .legal td{border-top:0}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}

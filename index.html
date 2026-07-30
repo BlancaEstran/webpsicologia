@@ -4,296 +4,115 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blanca Estrán · Psicóloga General Sanitaria en Majadahonda y online</title>
-<meta name="description" content="Psicoterapia para adultos y parejas desde un enfoque integrador. Trauma, apego, duelo y malestar emocional. Sesiones presenciales en Majadahonda y online.">
+<meta name="description" content="Psicoterapia para adultos, parejas, adolescentes y niños desde un enfoque integrador. Trauma, apego, duelo y malestar emocional. Sesiones presenciales en Majadahonda y online.">
+<link rel="canonical" href="https://blancaestran.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blanca Estrán · Psicóloga General Sanitaria">
+<meta property="og:description" content="Psicoterapia para adultos, parejas, adolescentes y niños en Majadahonda y online.">
+<meta property="og:url" content="https://blancaestran.com/">
+<meta property="og:image" content="https://blancaestran.com/imagenes/blanca-retrato.jpg">
+<meta property="og:locale" content="es_ES">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<style>
-:root{
-  /* Paleta A1 · Tinta·Oro (congelada) */
-  --tinta:#16243F;
-  --tinta-media:#3A4B68;
-  --oro:#A98A4B;
-  --oro-claro:#C9AE76;
-  --blanco:#FFFFFF;
-  --texto:#2C3341;
-  --texto-suave:#5C6675;
-  --linea:#E3E1DC;
-
-  --display:"Fraunces",Georgia,serif;
-  --cuerpo:"Work Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-
-  --ancho:1120px;
-  --gutter:32px;
-}
-
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;
-  background:var(--blanco);
-  color:var(--texto);
-  font-family:var(--cuerpo);
-  font-weight:300;
-  font-size:17px;
-  line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-
-.contenedor{width:100%;max-width:var(--ancho);margin:0 auto;padding:0 var(--gutter)}
-
-.salto-contenido{position:absolute;left:-9999px}
-.salto-contenido:focus{left:16px;top:16px;z-index:99;background:var(--tinta);color:#fff;padding:10px 16px}
-
-:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
-
-/* ---------- Tipografía ---------- */
-h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--tinta);margin:0;letter-spacing:-0.01em}
-h1{font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.14}
-h1 em{font-style:italic;color:var(--oro);font-weight:400}
-h2{font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.22}
-h3{font-size:1.14rem;line-height:1.35}
-p{margin:0 0 1.15em}
-p:last-child{margin-bottom:0}
-
-.rotulo{
-  font-family:var(--cuerpo);
-  font-size:.72rem;
-  font-weight:500;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--oro);
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin:0 0 22px;
-}
-.rotulo::after{content:"";flex:1;height:1px;background:var(--linea);max-width:120px}
-
-/* ---------- Cabecera ---------- */
-.cabecera{border-bottom:1px solid var(--linea);background:var(--blanco)}
-.cabecera .contenedor{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}
-.marca{font-family:var(--display);font-size:1.22rem;color:var(--tinta);text-decoration:none;line-height:1.1}
-.marca span{display:block;font-family:var(--cuerpo);font-size:.7rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--texto-suave);margin-top:5px}
-.menu{display:flex;align-items:center;gap:30px}
-.menu a{font-size:.93rem;text-decoration:none;color:var(--texto);padding:4px 0;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
-.menu a:hover{color:var(--tinta);border-bottom-color:var(--oro)}
-
-.boton{
-  display:inline-block;
-  font-family:var(--cuerpo);
-  font-size:.93rem;
-  font-weight:400;
-  letter-spacing:.01em;
-  text-decoration:none;
-  padding:13px 26px;
-  border:1px solid var(--tinta);
-  background:var(--tinta);
-  color:#fff;
-  transition:background .2s,color .2s,border-color .2s;
-}
-.boton:hover{background:var(--oro);border-color:var(--oro)}
-.boton--linea{background:transparent;color:var(--tinta)}
-.boton--linea:hover{background:var(--tinta);color:#fff;border-color:var(--tinta)}
-.boton--claro{border-color:rgba(255,255,255,.5);background:transparent;color:#fff}
-.boton--claro:hover{background:#fff;color:var(--tinta);border-color:#fff}
-
-/* ---------- Portada ---------- */
-.heroe{padding:104px 0 96px}
-.heroe .contenedor{display:grid;grid-template-columns:1.12fr .88fr;gap:72px;align-items:center}
-.heroe .entrada{font-size:1.08rem;color:var(--texto-suave);max-width:34em;margin-top:30px}
-.acciones{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-
-.retrato{
-  position:relative;
-  aspect-ratio:4/5;
-  background:#F0EEEA;
-  border:1px solid var(--linea);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-.retrato::after{
-  content:"";
-  position:absolute;
-  inset:auto -14px -14px auto;
-  width:64%;
-  height:52%;
-  border-right:1px solid var(--oro-claro);
-  border-bottom:1px solid var(--oro-claro);
-  z-index:-1;
-}
-.retrato p{font-size:.82rem;color:var(--texto-suave);padding:24px;line-height:1.6}
-.retrato code{font-family:var(--cuerpo);color:var(--oro)}
-
-/* ---------- Áreas ---------- */
-.areas{padding:88px 0;border-top:1px solid var(--linea)}
-.areas .rejilla{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linea);margin-top:44px}
-.area{background:var(--blanco);padding:34px 28px 32px}
-.area h3{margin-bottom:10px}
-.area p{font-size:.95rem;color:var(--texto-suave)}
-.areas .nota{margin-top:32px;font-size:.95rem;color:var(--texto-suave);max-width:52em}
-.areas .nota a{color:var(--tinta);text-decoration:none;border-bottom:1px solid var(--oro)}
-
-/* ---------- Cómo trabajo ---------- */
-.metodo{padding:88px 0;border-top:1px solid var(--linea)}
-.metodo .contenedor{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.metodo .texto p{color:var(--texto-suave)}
-.cita{
-  margin:0;
-  padding:8px 0 8px 30px;
-  border-left:2px solid var(--oro);
-  font-family:var(--display);
-  font-size:clamp(1.3rem,2.1vw,1.62rem);
-  line-height:1.42;
-  color:var(--tinta);
-}
-.cita .pendiente{color:var(--oro);font-style:italic;font-size:.86em}
-.cita cite{display:block;margin-top:18px;font-family:var(--cuerpo);font-style:normal;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-suave)}
-
-/* ---------- Panel oscuro ---------- */
-.panel{background:var(--tinta);color:rgba(255,255,255,.86);padding:88px 0}
-.panel h2{color:#fff}
-.panel .rotulo{color:var(--oro-claro)}
-.panel .rotulo::after{background:rgba(255,255,255,.22)}
-.panel .contenedor{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:start}
-.panel p{color:rgba(255,255,255,.82)}
-.panel .acciones{margin-top:30px}
-.lista-limpia{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.18)}
-.lista-limpia li{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:.97rem}
-.lista-limpia strong{display:block;font-weight:500;color:#fff;font-size:1rem;margin-bottom:3px}
-
-/* ---------- Trayectoria ---------- */
-.trayectoria{padding:76px 0;border-top:1px solid var(--linea)}
-.trayectoria .rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:40px}
-.dato{border-top:2px solid var(--oro);padding-top:18px}
-.dato h3{font-size:1.02rem;margin-bottom:6px}
-.dato p{font-size:.93rem;color:var(--texto-suave)}
-
-/* ---------- Cierre ---------- */
-.cierre{padding:96px 0 104px;border-top:1px solid var(--linea);text-align:center}
-.cierre h2{max-width:24em;margin:0 auto}
-.cierre p{max-width:46em;margin:26px auto 0;color:var(--texto-suave)}
-.cierre .acciones{justify-content:center}
-
-/* ---------- Pie ---------- */
-.pie{border-top:1px solid var(--linea);padding:40px 0;font-size:.86rem;color:var(--texto-suave)}
-.pie .contenedor{display:flex;flex-wrap:wrap;gap:18px 34px;justify-content:space-between;align-items:center}
-.pie a{text-decoration:none}
-.pie a:hover{color:var(--tinta)}
-.pie nav{display:flex;flex-wrap:wrap;gap:22px}
-
-/* ---------- Adaptación ---------- */
-@media(max-width:980px){
-  .menu{display:none}
-  .heroe{padding:72px 0 64px}
-  .heroe .contenedor,.metodo .contenedor,.panel .contenedor{grid-template-columns:1fr;gap:44px}
-  .retrato{max-width:360px}
-  .areas .rejilla{grid-template-columns:repeat(2,1fr)}
-  .trayectoria .rejilla{grid-template-columns:1fr;gap:28px}
-}
-@media(max-width:560px){
-  :root{--gutter:22px}
-  .areas .rejilla{grid-template-columns:1fr}
-  .acciones .boton{width:100%;text-align:center}
-}
-@media(prefers-reduced-motion:reduce){
-  *{transition:none!important;animation:none!important}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
-<a class="salto-contenido" href="#principal">Ir al contenido</a>
+<a class="saltar" href="#principal">Ir al contenido</a>
 
-<header class="cabecera">
-  <div class="contenedor">
-    <a class="marca" href="/">Blanca Estrán<span>Psicología · Majadahonda y online</span></a>
-    <nav class="menu" aria-label="Principal">
-      <a href="/sobre-mi">Sobre mí</a>
-      <a href="/como-trabajo">Cómo trabajo</a>
-      <a href="/en-que-puedo-ayudarte">En qué puedo ayudarte</a>
-      <a href="/psicologia-y-fe">Psicología y fe</a>
-      <a href="/contacto">Contacto</a>
+<header class="cima">
+  <div class="env">
+    <a class="marca" href="/">Blanca Estrán<span>Psicóloga General Sanitaria</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/sobre-mi/">Sobre mí</a>
+      <a href="/como-trabajo/">Cómo trabajo</a>
+      <a href="/en-que-puedo-ayudarte/">En qué puedo ayudarte</a>
+      <a href="/psicologia-y-fe/">Psicología y fe</a>
+      <a class="cita" href="/contacto/">Contacto</a>
     </nav>
-    <a class="boton" href="/contacto">Pedir cita</a>
   </div>
 </header>
 
 <main id="principal">
 
-  <section class="heroe">
-    <div class="contenedor">
+  <section class="portada">
+    <div class="env">
       <div>
-        <p class="rotulo">Psicóloga General Sanitaria · Col. M-42822</p>
+        <p class="credencial">Psicóloga General Sanitaria · Col. M-42822</p>
         <h1>Aprender a ser persona, a vivir tu propia vida: <em>esa es la gran aventura</em>.</h1>
-        <p class="entrada">Psicoterapia para adultos y parejas desde una mirada integradora, que atiende lo biológico, lo psicológico, lo social y lo espiritual. Un acompañamiento que empieza por lo esencial: un vínculo en el que puedas ser tú.</p>
-        <div class="acciones">
-          <a class="boton" href="/contacto">Pedir primera cita</a>
-          <a class="boton boton--linea" href="/como-trabajo">Cómo trabajo</a>
+        <div class="sangrado">
+          <p class="entradilla">Psicoterapia para adultos, parejas, adolescentes y niños desde una mirada integradora, que atiende lo biológico, lo psicológico, lo social y lo espiritual. Un acompañamiento que empieza por lo esencial: un vínculo en el que puedas ser tú.</p>
+          <div class="acciones">
+            <a class="btn" href="/contacto/">Pedir primera cita</a>
+            <a class="btn btn--linea" href="/como-trabajo/">Cómo trabajo</a>
+          </div>
         </div>
       </div>
-      <div class="retrato">
-        <p><strong>Retrato pendiente</strong><br>Vertical 4:5, luz natural, fondo neutro.<br><code>src/assets/blanca-retrato.jpg</code></p>
-      </div>
+      <figure class="retrato">
+        <img src="/imagenes/blanca-retrato.jpg" alt="Retrato de Blanca Estrán, psicóloga general sanitaria" width="1254" height="1254">
+        <figcaption>Consulta en Majadahonda y sesiones online.</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="areas">
-    <div class="contenedor">
-      <p class="rotulo">En qué puedo ayudarte</p>
+  <section class="motivos">
+    <div class="env">
       <h2>Motivos por los que suele empezar una terapia</h2>
-      <div class="rejilla">
-        <article class="area">
-          <h3>Trauma y apego</h3>
-          <p>Experiencias que siguen doliendo en el presente y formas de vincularte que se repiten sin que sepas por qué.</p>
-        </article>
-        <article class="area">
-          <h3>Duelo y pérdidas</h3>
-          <p>Muertes, rupturas y cambios de vida que necesitan un espacio donde ser puestos en palabras.</p>
-        </article>
-        <article class="area">
-          <h3>Ansiedad y malestar emocional</h3>
-          <p>Angustia, miedo, tristeza persistente o la sensación de estar funcionando sin vivir.</p>
-        </article>
-        <article class="area">
-          <h3>Pareja y familia</h3>
-          <p>Conflictos que se enredan, distancias que crecen y conversaciones que nunca acaban de darse.</p>
-        </article>
-      </div>
-      <p class="nota">También acompaño a personas que han vivido situaciones de abuso de poder o de conciencia en contextos institucionales y comunitarios. <a href="/psicologia-y-fe">Más sobre esto</a>.</p>
+
+      <article class="motivo">
+        <h3>Trauma y apego</h3>
+        <p>Experiencias que siguen doliendo en el presente y formas de vincularte que se repiten sin que sepas por qué.</p>
+      </article>
+
+      <article class="motivo">
+        <h3>Duelo y pérdidas</h3>
+        <p>Muertes, rupturas y cambios de vida que necesitan un espacio donde ser puestos en palabras.</p>
+      </article>
+
+      <article class="motivo">
+        <h3>Ansiedad y malestar emocional</h3>
+        <p>Angustia, miedo, tristeza persistente o la sensación de estar funcionando sin vivir.</p>
+      </article>
+
+      <article class="motivo">
+        <h3>Pareja y familia</h3>
+        <p>Conflictos que se enredan, distancias que crecen y conversaciones que nunca acaban de darse.</p>
+      </article>
+
+      <p class="cola">También acompaño a personas que han vivido situaciones de abuso de poder o de conciencia en contextos institucionales y comunitarios. <a class="enlace" href="/psicologia-y-fe/">Más sobre esto</a>.</p>
     </div>
   </section>
 
   <section class="metodo">
-    <div class="contenedor">
-      <div class="texto">
-        <p class="rotulo">Cómo trabajo</p>
-        <h2>Antes que una técnica, una relación</h2>
-        <p>Trabajo desde un enfoque integrador y sistémico: no miro solo el síntoma, sino a la persona completa y el sistema de relaciones en el que vive. Eso incluye la dimensión espiritual cuando tú la sitúas como parte de tu vida, y la deja fuera cuando no.</p>
-        <p>En la práctica: sesiones de 50 minutos, formulación compartida del caso desde las primeras citas, objetivos que revisamos juntas y supervisión clínica semanal de mi trabajo. Sin protocolos aplicados a ciegas y sin promesas de plazos que nadie puede garantizar.</p>
+    <div class="env">
+      <div>
+        <hr class="filete">
+        <h2>Mi forma de trabajar</h2>
+        <p>Trabajo desde un enfoque integrador y sistémico. Miro a la persona completa y el sistema de relaciones en el que vive, no solo el síntoma que te trae a consulta. Eso incluye la dimensión espiritual cuando tú la sitúas como parte de tu vida, y la deja fuera cuando no.</p>
+        <p>Sin protocolos aplicados a ciegas y sin promesas de plazos que nadie puede garantizar.</p>
+        <p><a class="enlace" href="/como-trabajo/">Cómo es el proceso, paso a paso</a></p>
       </div>
-      <blockquote class="cita">
-        <span class="pendiente">[Aquí va tu frase sobre el vínculo, con tus palabras — pendiente de recuperar el texto aprobado.]</span>
-        <cite>Blanca Estrán</cite>
-      </blockquote>
+      <ul class="detalle">
+        <li><span class="clave">Sesiones</span><span class="valor">50 minutos, presenciales en Majadahonda u online.</span></li>
+        <li><span class="clave">Primeras citas</span><span class="valor">Formulación compartida del caso: te explico qué entiendo que está pasando y lo revisamos juntas.</span></li>
+        <li><span class="clave">Objetivos</span><span class="valor">Acordados contigo y revisados a lo largo del proceso.</span></li>
+        <li><span class="clave">Supervisión</span><span class="valor">Supervisión clínica semanal de mi trabajo.</span></li>
+      </ul>
     </div>
   </section>
 
-  <section class="panel">
-    <div class="contenedor">
+  <section class="fe">
+    <div class="env">
       <div>
-        <p class="rotulo">Psicología y fe</p>
+        <hr class="filete">
         <h2>Cuando lo que duele toca también la vida de fe</h2>
         <p>Hay heridas que se producen dentro de espacios de confianza: abusos de poder, de conciencia o espirituales en contextos comunitarios e institucionales. Suelen dejar a la persona sin lenguaje y sin lugar donde contarlo.</p>
         <p>Investigo y trabajo clínicamente en esa intersección, con el cuidado de no confundir los planos: aquí no se hace acompañamiento espiritual, se hace psicoterapia.</p>
         <div class="acciones">
-          <a class="boton boton--claro" href="/psicologia-y-fe">Leer más</a>
+          <a class="btn btn--claro" href="/psicologia-y-fe/">Leer más</a>
         </div>
       </div>
-      <ul class="lista-limpia">
+      <ul class="hitos">
         <li><strong>Cátedra Pro+Tejer · UCM</strong>Colaboración en el estudio del abuso de poder, de conciencia y espiritual.</li>
         <li><strong>Proyecto Repara · Diócesis de Madrid</strong>Participación en el ámbito de atención y prevención.</li>
         <li><strong>Trabajo Fin de Máster</strong>Investigación sobre abuso de conciencia en contextos católicos.</li>
@@ -301,33 +120,39 @@ p:last-child{margin-bottom:0}
     </div>
   </section>
 
-  <section class="trayectoria">
-    <div class="contenedor">
-      <p class="rotulo">Formación</p>
-      <div class="rejilla">
-        <div class="dato">
-          <h3>Doble grado</h3>
-          <p>Psicología y Logopedia, Universidad Complutense de Madrid.</p>
-        </div>
-        <div class="dato">
-          <h3>Máster en Psicología General Sanitaria</h3>
-          <p>Universidad Francisco de Vitoria. Colegiada M-42822.</p>
-        </div>
-        <div class="dato">
-          <h3>Experto en Psicoterapia Integradora, Trauma, Apego y EMDR</h3>
-          <p>NB Psicología Integral, titulación UTAMED.</p>
-        </div>
+  <section class="formacion">
+    <div class="env">
+      <h2>Formación</h2>
+
+      <div class="titulo">
+        <h3>Doble grado en Psicología y Logopedia</h3>
+        <p>Universidad Complutense de Madrid.</p>
       </div>
+
+      <div class="titulo">
+        <h3>Máster en Psicología General Sanitaria</h3>
+        <p>Universidad Francisco de Vitoria. Colegiada M-42822.</p>
+      </div>
+
+      <div class="titulo">
+        <h3>Experto en Psicoterapia Integradora, Trauma, Apego y EMDR</h3>
+        <p>NB Psicología Integral, titulación UTAMED.</p>
+      </div>
+
+      <p class="cola apunte" style="margin-top:30px"><a class="enlace" href="/sobre-mi/">Sobre mí</a></p>
     </div>
   </section>
 
   <section class="cierre">
-    <div class="contenedor">
-      <h2>Toda terapia empieza por conocerse</h2>
-      <p>Puedes reservar directamente una primera cita o, si lo prefieres, contarme brevemente qué necesitas y te responderé personalmente. Sesiones online y presenciales en Majadahonda · 70 € por sesión · bonos semanales de 50 €.</p>
-      <div class="acciones">
-        <a class="boton" href="/contacto">Pedir primera cita</a>
-        <a class="boton boton--linea" href="mailto:hola@blancaestran.com">Escribirme</a>
+    <div class="env">
+      <hr class="filete">
+      <h2>Si estás pensando en empezar</h2>
+      <div class="sangrado">
+        <p class="entradilla">Puedes escribirme contándome brevemente qué necesitas y te respondo personalmente. La primera cita sirve para conocernos y ver si puedo ayudarte; si creo que otra profesional encaja mejor con lo que traes, te lo diré.</p>
+        <div class="acciones">
+          <a class="btn" href="/contacto/">Pedir primera cita</a>
+          <a class="btn btn--linea" href="mailto:info@blancaestran.com">Escribirme</a>
+        </div>
       </div>
     </div>
   </section>
@@ -335,13 +160,32 @@ p:last-child{margin-bottom:0}
 </main>
 
 <footer class="pie">
-  <div class="contenedor">
-    <p>Blanca Estrán · Psicóloga General Sanitaria · Col. M-42822 · Majadahonda, Madrid</p>
-    <nav aria-label="Legal">
-      <a href="/aviso-legal">Aviso legal</a>
-      <a href="/privacidad">Privacidad</a>
-      <a href="/cookies">Cookies</a>
-    </nav>
+  <div class="env">
+    <div>
+      <p class="pie-marca">Blanca Estrán</p>
+      <p>Psicóloga General Sanitaria · Col. M-42822<br>Majadahonda (Madrid) y sesiones online</p>
+    </div>
+    <div>
+      <h4>Secciones</h4>
+      <nav aria-label="Secundaria">
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/como-trabajo/">Cómo trabajo</a>
+        <a href="/en-que-puedo-ayudarte/">En qué puedo ayudarte</a>
+        <a href="/psicologia-y-fe/">Psicología y fe</a>
+        <a href="/contacto/">Contacto</a>
+      </nav>
+    </div>
+    <div>
+      <h4>Información legal</h4>
+      <nav aria-label="Legal">
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/privacidad/">Política de privacidad</a>
+        <a href="/cookies/">Política de cookies</a>
+      </nav>
+    </div>
+  </div>
+  <div class="env pie-fin">
+    <p>© 2026 Blanca Estrán</p>
   </div>
 </footer>
 
