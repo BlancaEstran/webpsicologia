@@ -3,5 +3,8 @@ Allow: /
 Disallow: /aviso-legal/
 Disallow: /privacidad/
 Disallow: /cookies/
+Disallow: /psicologia-y-fe/
+Disallow: /estilo/
+Disallow: /maquetas/
 
 Sitemap: https://blancaestran.com/sitemap.xml

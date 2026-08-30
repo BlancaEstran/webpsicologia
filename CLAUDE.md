@@ -113,8 +113,10 @@ desactiva reveal y marquesina. Prohibido: parallax, animación por letra, cursor
 
 - Title/meta/canonical/OG por página según el mapa. JSON-LD Psychologist en layout
   (areaServed: Majadahonda, Las Rozas, Pozuelo de Alarcón, Boadilla del Monte,
-  Villanueva de la Cañada, Madrid, España). Teléfono y dirección: PENDIENTES,
-  idénticos a Google Business cuando Fer los facilite.
+  Villanueva de la Cañada, Madrid, España).
+- **Datos de contacto definitivos** (idénticos a Google Business; van en el JSON-LD de
+  todas las páginas y en el footer): Calle de la Brisa, 1 · 28221 Majadahonda · Madrid ·
+  ES · teléfono +34 644 476 554.
 - Nav "Psicología y fe" → `/psicologa-catolica/`. GitHub Pages no permite 301 real:
   `/psicologia-y-fe/index.html` queda como página puente con `meta http-equiv="refresh"`,
   canonical a la URL nueva y enlace manual.
@@ -127,9 +129,11 @@ desactiva reveal y marquesina. Prohibido: parallax, animación por letra, cursor
 ## Contenido — reglas vivas
 
 - H1 de portada fijo: "Aprender a ser persona, a vivir tu propia vida: esa es la gran aventura."
-- Genérico masculino ("otro profesional"). Excepción literal de Fer: "poder trabajar
-  juntas" en el párrafo de primeras sesiones (confirmar si pasa a "juntos").
-- Sin supervisión clínica mencionada. Sin precios. Sin testimonios ni datos inventados.
+- **Genérico masculino en toda la web**, como recomienda la RAE ("otro profesional").
+  Decisión confirmada: ya no hay excepción; "poder trabajar juntas" pasa a "juntos".
+- La supervisión clínica no se menciona en la portada. En `/sobre-mi/` y `/como-trabajo/`
+  puede mencionarse: es señal de calidad profesional.
+- Sin precios. Sin testimonios ni datos inventados.
 - EMDR siempre citado como NB Psicología Integral / titulación UTAMED.
 - Delimitaciones de psicología y fe intactas (psicoterapia, no acompañamiento
   espiritual; sin autoridad canónica; independiente de instituciones eclesiásticas).

@@ -122,6 +122,8 @@ img{display:block;max-width:100%}
 .pill{
   background:var(--boton);color:#FBF5EC !important;
   padding:7px 20px;border-radius:6px;text-decoration:none;
+  font-family:var(--display);font-size:.7rem;font-weight:500;
+  letter-spacing:.26em;text-transform:uppercase;white-space:nowrap;
 }
 .pill:hover,.pill:focus-visible{background:var(--boton-osc)}
 
@@ -145,6 +147,132 @@ img{display:block;max-width:100%}
 .marquee-track span{padding:0 18px}
 .marquee-track .pto{color:var(--primario)}
 @keyframes desliza{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── Accesibilidad ───────────────────────────────────────────────────────── */
+
+.saltar{position:absolute;left:-9999px}
+.saltar:focus{
+  left:16px;top:16px;z-index:99;
+  background:var(--boton);color:var(--papel);padding:10px 18px;
+  font-family:var(--display);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+}
+:focus-visible{outline:2px solid var(--primario);outline-offset:3px}
+
+/* ── Cabecera común ──────────────────────────────────────────────────────── */
+
+header{
+  background-color:var(--papel);background-image:var(--textura);
+  position:relative;z-index:20;
+}
+.nav{
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  max-width:1240px;margin:0 auto;padding:22px 28px;gap:20px;
+}
+.nav-izq,.nav-der{
+  display:flex;gap:24px;align-items:center;
+  font-family:var(--display);font-size:.7rem;font-weight:500;
+  letter-spacing:.26em;text-transform:uppercase;
+}
+.nav-der{justify-content:flex-end}
+.nav a{text-decoration:none;color:var(--negro)}
+.nav-izq a,.nav-der a{white-space:nowrap}
+.nav a:hover,.nav a:focus-visible{color:var(--primario)}
+.nav a[aria-current="page"]{color:var(--primario)}
+
+.logo{text-align:center;text-decoration:none;display:block}
+.logo .nombre{
+  font-family:var(--titulos);font-weight:500;letter-spacing:.22em;
+  font-size:1.22rem;color:var(--negro);text-transform:uppercase;display:block;
+}
+.logo .rol{
+  font-family:var(--display);letter-spacing:.42em;font-size:.66rem;
+  color:var(--negro);text-transform:uppercase;margin-top:2px;display:block;
+}
+
+/* Menú móvil: desplegable nativo, sin JavaScript */
+.menu{display:none}
+.menu-boton{
+  font-family:var(--display);font-size:.7rem;font-weight:500;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--negro);
+  cursor:pointer;list-style:none;display:inline-block;padding:6px 0;
+}
+.menu-boton::-webkit-details-marker{display:none}
+.menu-boton::marker{content:""}
+.menu-boton:hover,.menu[open] .menu-boton{color:var(--primario)}
+.menu .cerrar,.menu[open] .abrir{display:none}
+.menu[open] .cerrar{display:inline}
+.menu-panel{
+  position:absolute;left:0;right:0;top:100%;
+  background-color:var(--papel);background-image:var(--textura);
+  border-top:1px solid var(--borde);border-bottom:1px solid var(--borde);
+  padding:18px 24px 26px;display:flex;flex-direction:column;gap:4px;text-align:center;
+}
+.menu-panel a{
+  font-family:var(--titulos);font-weight:500;text-transform:uppercase;
+  letter-spacing:.14em;font-size:.92rem;color:var(--negro);
+  text-decoration:none;padding:12px 0;
+}
+.menu-panel a:hover,.menu-panel a:focus-visible{color:var(--primario)}
+.menu-panel a[aria-current="page"]{color:var(--primario)}
+
+/* Por debajo de 1024px la navegación completa no cabe en una línea: entra el menú */
+@media(max-width:1024px){
+  .nav{grid-template-columns:auto 1fr auto;padding:16px 20px;gap:12px}
+  .nav-izq,.nav-der{display:none}
+  .menu{display:block;justify-self:start}
+  .pill-movil{display:inline-block;justify-self:end}
+  .logo .nombre{font-size:1.02rem;letter-spacing:.18em}
+  .logo .rol{font-size:.58rem;letter-spacing:.34em}
+}
+/* El logotipo se mantiene en dos líneas (nombre + rol) también en pantallas estrechas */
+@media(max-width:480px){
+  .nav{padding:14px 16px;gap:8px}
+  .menu-boton{font-size:.62rem;letter-spacing:.18em}
+  .pill{padding:6px 13px;font-size:.62rem;letter-spacing:.18em}
+  .logo .nombre{font-size:.8rem;letter-spacing:.08em}
+  .logo .rol{font-size:.5rem;letter-spacing:.26em}
+}
+@media(min-width:1025px){
+  .pill-movil{display:none}
+}
+@media(max-width:1200px){
+  .nav-izq,.nav-der{gap:18px}
+}
+
+/* ── Pie común ───────────────────────────────────────────────────────────── */
+
+footer{
+  background-color:#F4E6D1;background-image:var(--textura);
+  padding:76px 28px 40px;
+}
+.foot{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:start;
+  font-family:var(--display);font-size:.84rem;
+}
+.foot a{display:block;text-decoration:none;color:var(--texto);margin-bottom:10px}
+.foot a:hover,.foot a:focus-visible{color:var(--primario)}
+.foot-der{text-align:right}
+.foot-centro{
+  font-family:var(--titulos);font-weight:500;font-size:1.12rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--negro);
+  text-align:center;line-height:1.3;
+}
+.foot-centro small{
+  display:block;font-family:var(--cuerpo);font-style:normal;font-size:.58rem;
+  letter-spacing:.3em;text-transform:uppercase;margin-top:10px;color:var(--texto-suave);
+}
+.copy{
+  max-width:1100px;margin:52px auto 0;text-align:center;
+  font-size:.74rem;color:var(--texto-suave);font-family:var(--cuerpo);line-height:2;
+}
+.copy a{color:var(--texto-suave);text-decoration:none;border-bottom:1px solid var(--borde)}
+.copy a:hover{color:var(--primario)}
+@media(max-width:920px){
+  footer{padding:56px 24px 32px}
+  .foot{grid-template-columns:1fr;text-align:center;gap:32px}
+  .foot-der{text-align:center}
+}
 
 /* ── Dato pendiente: se marca visible, nunca se inventa ──────────────────── */
 
