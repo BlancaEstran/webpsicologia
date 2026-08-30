@@ -1,0 +1,163 @@
+/* ==========================================================================
+   tokens.css · Sistema de diseño v16 (CONGELADO)
+   Paleta B1 "Ámbar", textura de papel, tres papeles tipográficos y clases base.
+   Se enlaza SIEMPRE antes que estilo.css.
+   Fuente de verdad visual: maquetas/home-v16.html · reglas: CLAUDE.md
+   ========================================================================== */
+
+/* ── Fuentes autoalojadas (cero peticiones a terceros) ───────────────────── */
+
+@font-face{
+  font-family:'Playfair Display';
+  src:url('/fuentes/playfair.woff2') format('woff2');
+  font-weight:400 900;font-style:normal;font-display:swap;
+  unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('/fuentes/montserrat.woff2') format('woff2');
+  font-weight:100 900;font-style:normal;font-display:swap;
+  unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('/fuentes/montserrat-italic.woff2') format('woff2');
+  font-weight:100 900;font-style:italic;font-display:swap;
+  unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026;
+}
+/* No existe Playfair italic: las cursivas serif están prohibidas. */
+
+/* ── Tokens ──────────────────────────────────────────────────────────────── */
+
+:root{
+  /* Paleta B1 "Ámbar" */
+  --papel:#FBF5EC;
+  --arena:#F5E9D7;
+  --rosa:#F7DFC4;
+  --texto:#3A3A3A;
+  --texto-suave:#6B6461;
+  --negro:#221F1E;
+  --primario:#A9662B;
+  --primario-osc:#82491A;
+  --acento:#A9662B;
+  --boton:#46331B;
+  --boton-osc:#332409;
+  --borde:rgba(120,73,26,.16);
+
+  /* Familias */
+  --display:'Montserrat',sans-serif;
+  --cuerpo:'Montserrat',sans-serif;
+  --titulos:'Playfair Display',serif;
+
+  /* Grano de papel: va sobre el color de cada superficie, nunca liso */
+  --textura:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27220%27%20height%3D%27220%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.82%27%20numOctaves%3D%273%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%200.52%200%200%200%200%200.40%200%200%200%200%200.26%200%200%200%200.055%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27220%27%20height%3D%27220%27%20filter%3D%27url%28%23n%29%27/%3E%3C/svg%3E");
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--cuerpo);font-weight:400;font-size:15px;
+  color:var(--texto);
+  background-color:var(--papel);background-image:var(--textura);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+
+/* ── Los tres papeles tipográficos ───────────────────────────────────────── */
+
+/* Papel 1 · Títulos ("BLANCA ESTRÁN"): Playfair 500, versalitas */
+.papel1{
+  font-family:var(--titulos);font-weight:500;
+  text-transform:uppercase;letter-spacing:.14em;
+  color:var(--negro);line-height:1.6;
+}
+.papel1.ancho{letter-spacing:.12em}   /* h1 del hero */
+
+/* Papel 2 · Etiquetas ("PSICÓLOGA"): Montserrat 500, mayúsculas pequeñas */
+.papel2{
+  font-family:var(--display);font-weight:500;
+  text-transform:uppercase;letter-spacing:.26em;
+  font-size:.78rem;color:var(--negro);
+}
+
+/* Papel 3 · Cuerpo: Montserrat 400. La itálica es la ÚNICA voz de énfasis */
+.papel3{font-family:var(--cuerpo);font-weight:400;font-size:.97rem;line-height:1.8}
+.enfasis{font-style:italic;font-weight:600;color:var(--negro)}
+.frase-grande{
+  font-family:var(--display);font-style:italic;font-weight:300;
+  font-size:clamp(1.3rem,2.4vw,1.8rem);line-height:1.55;color:var(--negro);
+}
+.frase-grande strong{font-weight:600}
+
+/* Aplicaciones fijas del papel 2 */
+.kicker{
+  font-family:var(--display);font-size:.64rem;font-weight:500;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--texto-suave);
+}
+.titulin{
+  font-family:var(--display);font-weight:500;text-transform:uppercase;
+  letter-spacing:.26em;font-size:.78rem;color:var(--negro);margin-bottom:26px;
+}
+
+/* ── Sección ─────────────────────────────────────────────────────────────── */
+
+.seccion{max-width:1240px;margin:0 auto;padding:100px 28px}
+@media(max-width:920px){.seccion{padding:72px 24px}}
+
+/* ── Botón espresso (todos los CTA) ──────────────────────────────────────── */
+
+.btn{
+  display:inline-block;background:var(--boton);color:#FBF5EC;text-decoration:none;
+  font-family:var(--display);
+  font-size:.82rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  padding:14px 28px;border-radius:4px;transition:background .25s;
+}
+.btn:hover,.btn:focus-visible{background:var(--boton-osc)}
+
+/* Pastilla de navegación */
+.pill{
+  background:var(--boton);color:#FBF5EC !important;
+  padding:7px 20px;border-radius:6px;text-decoration:none;
+}
+.pill:hover,.pill:focus-visible{background:var(--boton-osc)}
+
+/* ── Reveal al scroll ────────────────────────────────────────────────────── */
+
+.rev{opacity:0;transform:translateY(12px);transition:opacity .55s ease-out,transform .55s ease-out}
+.rev.vis{opacity:1;transform:none}
+
+/* ── Marquesina ──────────────────────────────────────────────────────────── */
+
+.marquee{
+  background-color:var(--rosa);background-image:var(--textura);
+  overflow:hidden;padding:15px 0;
+}
+.marquee-track{
+  display:flex;white-space:nowrap;width:max-content;
+  animation:desliza 40s linear infinite;
+  font-family:var(--display);font-size:.66rem;font-weight:500;
+  letter-spacing:.26em;text-transform:uppercase;color:#6B4A28;
+}
+.marquee-track span{padding:0 18px}
+.marquee-track .pto{color:var(--primario)}
+@keyframes desliza{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── Dato pendiente: se marca visible, nunca se inventa ──────────────────── */
+
+.pendiente{
+  color:var(--primario);
+  border-bottom:1px dashed var(--primario);
+  opacity:.85;
+}
+
+/* ── Movimiento reducido ─────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .rev{opacity:1;transform:none;transition:none}
+  .marquee-track{animation:none !important;justify-content:center;width:auto !important}
+}

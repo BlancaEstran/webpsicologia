@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Muestrario del sistema · v16 (interno)</title>
+<link rel="stylesheet" href="/css/tokens.css">
+<style>
+  /* Estilos propios del muestrario. No forman parte del sistema. */
+  .m-wrap{max-width:1100px;margin:0 auto;padding:56px 24px 96px}
+  .m-cab{border-bottom:1px solid var(--borde);padding-bottom:28px;margin-bottom:12px}
+  .m-bloque{padding:44px 0;border-bottom:1px solid var(--borde)}
+  .m-bloque:last-child{border-bottom:0}
+  .m-et{font-family:var(--display);font-size:.6rem;font-weight:500;letter-spacing:.26em;
+        text-transform:uppercase;color:var(--texto-suave);margin-bottom:18px}
+  .m-nota{font-size:.78rem;color:var(--texto-suave);margin-top:10px}
+  .m-nota code{font-family:ui-monospace,Consolas,monospace;font-size:.74rem;background:rgba(120,73,26,.07);
+        padding:1px 5px;border-radius:3px}
+  .m-fila{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .m-color{display:flex;flex-wrap:wrap;gap:12px}
+  .m-swatch{width:140px}
+  .m-muestra{height:74px;border-radius:4px;border:1px solid var(--borde);background-image:var(--textura)}
+  .m-swatch .n{font-family:var(--display);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+        margin-top:7px;color:var(--negro)}
+  .m-swatch .h{font-family:ui-monospace,Consolas,monospace;font-size:.68rem;color:var(--texto-suave)}
+  .m-sup{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  .m-sup div{padding:24px 16px;border:1px solid var(--borde);border-radius:4px;background-image:var(--textura);
+        font-family:var(--display);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;text-align:center}
+  .m-oscuro{color:#F2E4D2}
+  .m-caja{border:1px dashed var(--borde);border-radius:4px;padding:22px}
+  @media(max-width:520px){.m-swatch{width:calc(50% - 6px)}}
+</style>
+</head>
+<body>
+
+<div class="m-wrap">
+
+  <header class="m-cab">
+    <p class="kicker">Uso interno · no indexable</p>
+    <h1 class="papel1" style="font-size:1.3rem;margin:14px 0 10px">Muestrario del sistema v16</h1>
+    <p class="papel3" style="max-width:44em">Validación visual de la paleta B1 «Ámbar», la textura de papel, los tres
+    papeles tipográficos y los componentes base. Todo sale de <code>/css/tokens.css</code>; esta página no define
+    ningún color ni tipografía propios.</p>
+  </header>
+
+  <!-- ── Papeles tipográficos ────────────────────────────────────────── -->
+  <section class="m-bloque">
+    <p class="m-et">01 · Los tres papeles</p>
+
+    <div class="m-caja" style="margin-bottom:18px">
+      <p class="papel1" style="font-size:1.22rem;letter-spacing:.22em">Blanca Estrán</p>
+      <p class="m-nota">Papel 1 · Títulos · <code>.papel1</code> · Playfair Display 500, mayúsculas,
+      letter-spacing .12–.14em. H1 del hero, h2 de secciones grandes, números 01/02/03, «Colaboro con»,
+      nombres de instituciones, centro del footer.</p>
+    </div>
+
+    <div class="m-caja" style="margin-bottom:18px">
+      <p class="papel2">Psicóloga · En qué puedo ayudarte · Pedir cita</p>
+      <p class="m-nota">Papel 2 · Etiquetas · <code>.papel2</code> (y <code>.kicker</code>, <code>.titulin</code>) ·
+      Montserrat 500, mayúsculas pequeñas, letter-spacing .26em uniforme. Navegación, kicker, titulines,
+      marquesina, títulos de pasos y micro-etiquetas.</p>
+    </div>
+
+    <div class="m-caja">
+      <p class="papel3" style="max-width:44em">Te invito a dar este paso para conocerte y entender qué cosas,
+      personas y situaciones no están bajo tu control. Aquí un
+      <span class="enfasis">destacado en línea</span>, que es la única voz de énfasis del sistema.</p>
+      <p class="frase-grande" style="margin-top:22px;max-width:20em">La terapia empieza por un
+      <strong>vínculo en el que puedas ser tú</strong>, sin juicio y sin prisa.</p>
+      <p class="m-nota">Papel 3 · Cuerpo · <code>.papel3</code> · Montserrat 400, 15px base, line-height 1.8.
+      La itálica de Montserrat es la ÚNICA voz de énfasis: <code>.enfasis</code> (600 italic) y
+      <code>.frase-grande</code> (300 italic). Prohibidas las cursivas serif y cualquier otra familia.</p>
+    </div>
+  </section>
+
+  <!-- ── Paleta ──────────────────────────────────────────────────────── -->
+  <section class="m-bloque">
+    <p class="m-et">02 · Paleta B1 «Ámbar» (CONGELADO)</p>
+    <div class="m-color">
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#FBF5EC"></div>
+        <div class="n">papel</div><div class="h">#FBF5EC</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#F5E9D7"></div>
+        <div class="n">arena</div><div class="h">#F5E9D7</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#F7DFC4"></div>
+        <div class="n">rosa</div><div class="h">#F7DFC4</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#A9662B"></div>
+        <div class="n">primario</div><div class="h">#A9662B</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#82491A"></div>
+        <div class="n">primario-osc</div><div class="h">#82491A</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#46331B"></div>
+        <div class="n">boton</div><div class="h">#46331B</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#332409"></div>
+        <div class="n">boton-osc</div><div class="h">#332409</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#3A3A3A"></div>
+        <div class="n">texto</div><div class="h">#3A3A3A</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#6B6461"></div>
+        <div class="n">texto-suave</div><div class="h">#6B6461</div></div>
+      <div class="m-swatch"><div class="m-muestra" style="background-color:#221F1E"></div>
+        <div class="n">negro</div><div class="h">#221F1E</div></div>
+    </div>
+    <p class="m-nota">El naranja tostado solo en dosis pequeñas: viñetas, puntos, acentos.
+    Prohibido: degradados en fondos, sombras difusas decorativas y blanco puro de fondo.</p>
+  </section>
+
+  <!-- ── Textura ─────────────────────────────────────────────────────── -->
+  <section class="m-bloque">
+    <p class="m-et">03 · Textura de papel sobre cada superficie</p>
+    <div class="m-sup">
+      <div style="background-color:var(--papel)">papel</div>
+      <div style="background-color:var(--arena)">arena</div>
+      <div style="background-color:var(--rosa)">rosa</div>
+      <div style="background-color:#F7EDDD">hero-texto</div>
+      <div style="background-color:#F4E6D1">footer</div>
+      <div class="m-oscuro" style="background-color:var(--primario-osc)">capítulo fe</div>
+    </div>
+    <p class="m-nota">Grano SVG <code>feTurbulence</code> (baseFrequency 0.82, numOctaves 3, stitchTiles stitch,
+    alpha .055) en mosaico sobre el color. Ninguna superficie va lisa. Variable <code>--textura</code>.</p>
+  </section>
+
+  <!-- ── Botones ─────────────────────────────────────────────────────── -->
+  <section class="m-bloque">
+    <p class="m-et">04 · Botones y pastilla</p>
+    <div class="m-fila">
+      <a class="btn" href="#04">Pedir primera cita</a>
+      <a class="btn" href="#04" style="background:var(--boton-osc)">Estado hover</a>
+      <a class="pill papel2" href="#04" style="font-size:.7rem">Pedir cita</a>
+    </div>
+    <p class="m-nota">Todos los CTA en espresso <code>#46331B</code> con texto <code>#FBF5EC</code>;
+    hover a <code>#332409</code>. <code>.btn</code> para llamadas de sección, <code>.pill</code> para la navegación.</p>
+  </section>
+
+  <!-- ── Marquesina (la banda va a todo el ancho, fuera del contenedor) ─ -->
+  <section class="m-bloque" style="border-bottom:0;padding-bottom:0">
+    <p class="m-et" style="margin-bottom:0">05 · Marquesina</p>
+  </section>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Aquí encontrarás un lugar seguro</span><span class="pto">•</span>
+    <span>Un vínculo en el que puedas ser tú</span><span class="pto">•</span>
+    <span>Consulta en Majadahonda y sesiones online</span><span class="pto">•</span>
+    <span>Aquí encontrarás un lugar seguro</span><span class="pto">•</span>
+    <span>Un vínculo en el que puedas ser tú</span><span class="pto">•</span>
+    <span>Consulta en Majadahonda y sesiones online</span><span class="pto">•</span>
+  </div>
+</div>
+
+<div class="m-wrap" style="padding-top:24px">
+  <p class="m-nota" style="margin-bottom:44px">40 s por ciclo, lineal, sin pausa.
+  Con <code>prefers-reduced-motion</code> se detiene y el contenido se centra.</p>
+
+  <!-- ── Movimiento ──────────────────────────────────────────────────── -->
+  <section class="m-bloque">
+    <p class="m-et">06 · Reveal al scroll</p>
+    <div class="m-caja rev">
+      <p class="papel3">Este bloque aparece al entrar en pantalla: opacity + 12 px, .55 s ease-out, una sola vez.</p>
+    </div>
+    <div class="m-caja rev" style="margin-top:14px">
+      <p class="papel3">Y este otro, para comprobar que cada elemento se revela por su cuenta.</p>
+    </div>
+    <p class="m-nota">Clase <code>.rev</code> + <code>/js/revelar.js</code> (IntersectionObserver, threshold .12).
+    Con <code>prefers-reduced-motion</code> el JS marca todo visible y no observa nada. Los otros dos únicos
+    movimientos del sistema son la marquesina y el hover de enlaces y botones.</p>
+  </section>
+
+  <!-- ── Dato pendiente ──────────────────────────────────────────────── -->
+  <section class="m-bloque">
+    <p class="m-et">07 · Dato pendiente</p>
+    <p class="papel3">Consulta en Majadahonda ·
+      <span class="pendiente">[Dirección postal completa · PENDIENTE]</span></p>
+    <p class="m-nota">Los datos que faltan se marcan visibles con <code>class="pendiente"</code>.
+    Nunca se inventan teléfonos, direcciones, precios, testimonios ni cifras.</p>
+  </section>
+
+</div>
+
+<script src="/js/revelar.js"></script>
+</body>
+</html>
