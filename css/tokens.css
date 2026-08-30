@@ -103,6 +103,9 @@ img{display:block;max-width:100%}
   letter-spacing:.26em;font-size:.78rem;color:var(--negro);margin-bottom:26px;
 }
 
+/* Fragmentos que no deben partirse (colegiación, teléfono, códigos) */
+.nb{white-space:nowrap}
+
 /* ── Sección ─────────────────────────────────────────────────────────────── */
 
 .seccion{max-width:1240px;margin:0 auto;padding:100px 28px}
