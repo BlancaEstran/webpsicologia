@@ -39,7 +39,7 @@ main p{max-width:none}
 /* ── Puedo ayudarte si… ──────────────────────────────────────────────────── */
 
 .ayuda{
-  display:grid;grid-template-columns:.55fr 1.6fr .55fr;gap:44px;align-items:center;
+  display:grid;grid-template-columns:.8fr 1.6fr .8fr;gap:44px;align-items:center;
   max-width:1240px;margin:0 auto;padding:30px 28px 96px;
 }
 .ph-img{aspect-ratio:3/4.6;overflow:hidden;position:relative;background:#E9DCCF}
@@ -70,7 +70,7 @@ main p{max-width:none}
 .paso{border-top:1px solid #CFC4BB;padding-top:24px}
 .paso-cab{display:flex;gap:16px;align-items:baseline;margin-bottom:12px}
 .paso-num{font-family:var(--titulos);font-weight:500;font-size:1.7rem;color:var(--negro)}
-.paso-cab h3{font-family:var(--display);font-weight:500;text-transform:uppercase;font-size:.74rem;letter-spacing:.26em;color:var(--negro)}
+.paso-cab h3{font-family:var(--display);font-weight:500;text-transform:uppercase;font-size:.95rem;letter-spacing:.22em;color:var(--negro)}
 .paso p{font-size:.9rem;color:var(--texto-suave)}
 @media(max-width:920px){.pasos{grid-template-columns:1fr;gap:36px;padding:40px 24px 72px}}
 
@@ -98,19 +98,29 @@ main p{max-width:none}
 .banda{
   position:relative;text-align:center;padding:120px 28px;overflow:hidden;
   background:linear-gradient(rgba(251,245,236,.78),rgba(251,245,236,.6)),
-             url('/imagenes/lamina-haz-luz.jpg') center/cover;
+             url('/imagenes/lamina-luz-banda.jpg') center/cover;
 }
 .banda h2{
   font-family:var(--titulos);font-weight:500;text-transform:uppercase;
   font-size:clamp(1.05rem,2.3vw,1.5rem);letter-spacing:.14em;color:var(--negro);margin-bottom:32px;
 }
+/* Enlace secundario discreto bajo el botón */
+.banda-alt{
+  margin-top:20px;
+  font-family:var(--display);font-size:.68rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;
+}
+.banda-alt a{color:var(--boton);text-decoration:none;border-bottom:1px solid var(--borde);padding-bottom:3px}
+.banda-alt a:hover,.banda-alt a:focus-visible{color:var(--primario);border-bottom-color:var(--primario)}
 
 /* ── Capítulo fe (lámina con velo ámbar oscuro) ──────────────────────────── */
 
+/* La lámina ya es oscura: el velo se aligera, pero sin bajar de lo que el
+   texto blanco y los tonos arena necesitan para leerse sobre el foco de luz. */
 .fe{
   color:#F2E4D2;
-  background:linear-gradient(rgba(72,43,16,.88),rgba(60,36,13,.92)),
-             url('/imagenes/lamina-haz-luz.jpg') center/cover;
+  background:linear-gradient(rgba(72,43,16,.80),rgba(60,36,13,.88)),
+             url('/imagenes/lamina-luz-fe.jpg') center/cover;
 }
 .fe-grid{max-width:1100px;margin:0 auto;padding:110px 28px;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .fe-grande{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(1.2rem,2.2vw,1.6rem);line-height:1.6;color:#fff}
@@ -119,7 +129,9 @@ main p{max-width:none}
 .fe-detalle a{color:#fff;font-weight:500;text-underline-offset:4px}
 .fe-insti{display:flex;gap:40px;flex-wrap:wrap;margin-top:26px}
 .fe-insti div .n{font-family:var(--titulos);font-weight:500;font-size:1rem;color:#fff}
-.fe-insti div .s{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#DDBE95;margin-top:2px}
+/* Ligeramente más claro que el #DDBE95 de la maqueta: a .62rem sobre el foco
+   de luz de la lámina, aquel se quedaba en 4.2:1 y este llega a 5.05:1 */
+.fe-insti div .s{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#E9D2AC;margin-top:2px}
 .fe-cierre{margin-top:26px}
 @media(max-width:920px){.fe-grid{grid-template-columns:1fr;gap:32px;padding:80px 24px}}
 

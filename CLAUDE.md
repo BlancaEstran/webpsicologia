@@ -88,7 +88,7 @@ Footer claro con "Blanca Estrán" en versalitas.
 
 ## Imágenes
 
-La pintura del hero y las tres láminas son **imágenes generadas con IA por nosotros**:
+La pintura del hero y las láminas son **imágenes generadas con IA por nosotros**:
 no hay ninguna licencia pendiente. Sus resoluciones actuales son las definitivas; si
 algún día se generan versiones mayores, se sustituye el archivo manteniendo el nombre.
 
@@ -96,8 +96,12 @@ algún día se generan versiones mayores, se sustituye el archivo manteniendo el
   Recorte object-position 34% center.
 - Laterales "ayuda": `imagenes/lamina-sol.jpg` (866×611) y
   `imagenes/lamina-textura-dorada.jpg` (644×881).
-- Fondos de banda CTA y capítulo fe: `imagenes/lamina-haz-luz.jpg` (515×694), la misma
-  imagen en ambas secciones.
+- Fondo de la banda CTA: `imagenes/lamina-luz-banda.jpg` (1536×1024), con velo claro.
+- Fondo del capítulo fe: `imagenes/lamina-luz-fe.jpg` (1536×1024), con velo ámbar
+  oscuro. Cada sección tiene su propia lámina: ya no comparten imagen.
+- `imagenes/archivo-hero-horizontal.jpg` (1536×1024): **material de reserva, sin uso
+  en ninguna página.** No enlazar sin decisión previa.
+- Retirada: `lamina-haz-luz.jpg`, que servía de fondo a las dos secciones.
 - Fotos reales de Blanca (estas sí son fotografías): exterior banco + mesa (sección
   Hola), sesión (bloque vínculo).
 - Prohibido: fotos de stock con rostros ajenos como si fueran Blanca; iconografía
